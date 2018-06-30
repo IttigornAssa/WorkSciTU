@@ -1,0 +1,25 @@
+{% load staticfiles %}
+{% block header %}
+  {% include 'home/base.html' %}
+{% endblock %}
+
+{% block content  %}
+    <div style="margin-left:20px; margin-top:20px;">
+        <h3>{{form.title}}</h3>
+        <table class="uk-table uk-table-divider uk-table-hover">
+            <tbody>
+                  <tr>
+                      <td style="width:20%;">{{ form.content|linebreaks }}</td>
+                  </tr>
+                  <tr>
+                      <td style="width:20%;">Download : <a class=".uk-text-lead" href="/files/{{form.file}}" download>{{ form.file }}</a> </td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+  {% include 'home/base2.html' %}
+{% endblock %}

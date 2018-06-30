@@ -1,0 +1,36 @@
+{% load staticfiles %}
+{% block header %}
+  {% include 'home/base.html' %}
+{% endblock %}
+
+{% block content  %}
+
+  <body>
+    <div>
+    <div style="margin-left:20px; margin-top:20px;">
+        <h2>
+            <span class=".uk-text-lead" style="color: #c00832;font-size: 20px;font-weight: bold;">การรับสมัคร
+            </span>
+        </h2>
+        <table class="uk-table uk-table-divider uk-table-hover">
+            <tbody>
+                {% for reg in all_reg %}
+                  <tr>
+                      <td style="width:20%">{{ reg.date }}</td>
+                      <td>
+                          <a class=".uk-text-lead" href="/register/{{ reg.id }}/">{{ reg.title }}</a>
+                      </td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}
+
+
+{% block footer %}
+  {% include 'home/base2.html' %}
+{% endblock %}
+
+

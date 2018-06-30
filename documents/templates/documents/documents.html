@@ -1,0 +1,62 @@
+{% load staticfiles %}
+{% block header %}
+  {% include 'home/base.html' %}
+{% endblock %}
+
+{% block content  %}
+    <div style="margin-left:20px; margin-top:20px;">
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div>
+            <h2 style="color: #c00832;font-size: 20px;font-weight: bold;"><span class=".uk-text-lead">แบบคำร้อง/เอกสารบัณฑิต</span></h2>
+            <table class="uk-table uk-table-middle uk-table-divider">
+                <tbody>
+                  <tr>
+                      <td>
+                        {% for document in all_document %}
+                          <a class=".uk-text-lead" href="/files/{{document.file}}" download> {{ document.title }}</a>
+                          {% if document.url %}
+                            <a class=".uk-text-lead" href="{{document.url}}"> &nbsp;(Online) </a>
+                          {% endif %}
+                          <br>
+                        {% endfor %}
+                      </td>
+                  </tr>
+                  <td>
+                  </td>
+                </tbody>
+            </table>
+          </div>
+          <div>
+            <h2 style="color: #c00832;font-size: 20px;font-weight: bold;"><span class=".uk-text-lead">แบบฟอร์มภาษาอังกฤษ(สำหรับนักศึกษาต่างชาติ)</span></h2>
+            <table class="uk-table uk-table-middle uk-table-divider">
+                <tbody>
+                  <tr>
+                      <td>
+                        {% for EngDocument in all_EngDocument %}
+                          <a class=".uk-text-lead" href="/files/{{EngDocument.file}}" download> {{ EngDocument.title }}</a>
+                          {% if EngDocument.url %}
+                            <a class=".uk-text-lead" > &nbsp;(Online) </a>
+                          {% endif %}
+                          <br>
+                        {% endfor %}
+                      </td>
+                  </tr>
+                  <td>
+                  </td>
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <h3 style="margin-top:0">รูปแบบการทำวิทยานิพนธ์ และขั้นตอน</h3>
+        {% for form in all_form %}
+          <a class=".uk-text-lead" href="/documents/{{ form.id }}/"> {{ form.title }}</a>
+          <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+
+{% block footer %}
+  {% include 'home/base2.html' %}
+{% endblock %}

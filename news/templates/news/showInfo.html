@@ -1,0 +1,29 @@
+{% load staticfiles %}
+{% block header %}
+  {% include 'home/base.html' %}
+{% endblock %}
+
+{% block content  %}
+    <div style="margin-left:20px; margin-top:20px;">
+        <h3>{{news.title}}</h3>
+        <table class="uk-table uk-table-divider uk-table-hover">
+            <tbody>
+                  <tr>
+                      <td style="width:20%;">{{ news.content|linebreaks }}</td>
+                  </tr>
+                  {% if news.file %}
+                  <tr>
+                      <td style="width:20%;">Download : <a href="/files/{{news.file}}" download> {{ news.file }} </a></td>
+                  </tr>
+                  {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+
+{% block footer %}
+  {% include 'home/base2.html' %}
+{% endblock %}
+

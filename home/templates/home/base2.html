@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SCITU</title>
+    {% load staticfiles %}   
+    <link rel="stylesheet" type="text/css" href="{% static 'home/uikit.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home/hamburger.css' %}" />
+    <script src="{% static 'home/uikit.min.js' %}"></script>
+    <style>
+    </style>
+</head>
+<body >
+    <br>
+    <img src="{% static 'home/pictures/show.jpg' %}" style="margin-bottom: -30px;"></img>
+    
+    <div >
+      <div class=".uk-text-lead"  style="float: left;width:auto;background-color: #F1F1F3 ;height:600px;font-weight: bold;font-size: 16px; width: 30% ">
+      <div class="leftFoot" style="float: left;width: 85%;background-color: #F1F1F3 ;height:360px;font-weight: bold;font-size: 16px; border-right: solid 1px #d9e6f2 ;margin-top:70px;" >
+          <div style="margin-left: 20%;width: auto;">
+          <p ><img src="{% static 'home/pictures/b2.png' %}" style="width: 75%;height: 40px;"></img></p>
+          <span style="color: black; font-weight: static;">ติดต่อ ธรรมศาสตร์</span ></div>
+          <div style="width: 100%;margin-left: 10% ;margin-top:10px;">
+            <ul >
+            <li style="display: inline-block;margin-right: 10px;"><a href="https://www.facebook.com/thammasat.uni/"><img src="{% static 'home/pictures/f.png' %}" width="22" height="22"></img></a></li>
+            <li style="display: inline-block;margin-right: 10px;"><a href="https://www.youtube.com/user/PRTHAMMASAT" ><img src="{% static 'home/pictures/y.png' %}" width="22" height="22"></img></a></li>
+            <li style="display: inline-block;margin-right: 10px;"><a href="https://twitter.com/thammasat_uni"><img src="{% static 'home/pictures/t.png' %}" width="22" height="22"></img></a></li>
+            <li style="display: inline-block;margin-right: 10px;"><a href="https://www.instagram.com/thammasat_official/"><img src="{% static 'home/pictures/i.png' %}" width="22" height="22"></img></a></li>
+
+
+            <div style="width: 100% margin-top:5px;" ><br><br>
+            <div style="border-bottom: solid 1px   #b3b3cc ; width: 60%; padding-bottom:10px;">
+            <p id="show1" style="display: inline;color: black;height: 20px;">ท่าพระจันทร์</p>
+            <input onclick="myFunction0()" id="hide0" type="submit"  value ="+"style="font-size:20px; display: inline; width: 40px;border: none ;background-color: #F1F1F3;outline: none;margin-right: 1%;float: right;height: 20px;color:#b3b3cc">
+            <p style="font-size:14px;; display: none;" id="hide00" > 2 ถนนพระจันทร์ แขวงพระบรม<br>มหาราชวัง, เขตพระนคร, <br> กรุงเทพฯ 10200, ประเทศไทย.<br>
+            Tel. +66 (0) 2613 3333 </p>   </div></div>
+
+            <div style="width: 100%" ><br>
+            <div style="border-bottom: solid 1px #b3b3cc ; width: 60%; padding-bottom:10px;">
+            <p id="show1" style="display: inline;color: black;height: 20px;">ศูนย์รังสิต</p>
+            <input onclick="myFunction1()" id="hide1" type="submit"  value ="+"style="font-size:20px;; display: inline; width: 40px;border: none ;background-color: #F1F1F3;outline: none;margin-right: 1%; float: right;height: 20px;color:#b3b3cc">
+            <p style="font-size:14px; display: none;" id="hide11" > 99 หมู่ 18, ถ.พหลโยธิน,<br> คลองหลวง, รังสิต, ปทุมธานี,<br> 12121 ประเทศไทย.<br>
+            Tel. +66 (0) 564 4440-79</p>   </div></div>
+
+            <div style="width: 100%" ><br>
+            <div style="border-bottom: solid 1px #b3b3cc ; width: 60%; padding-bottom:10px;">
+            <p id="show1" style="display: inline;color: black;height: 20px;"> ศูนย์พัทยา</p>
+            <input onclick="myFunction2()" id="hide2" type="submit"  value ="+"style="font-size:20px;; display: inline; width: 40px;border: none ;background-color: #F1F1F3;outline: none;margin-right: 1%; float: right;height: 20px;color:#b3b3cc">
+            <p style="font-size:14px;; display: none;" id="hide22" >อาคารบรรยายรวม เลขที่ 39/4 <br>หมู่ 5 ต.โปร่ง อ.บางละมุง<br>จ.ชลบุรี 20150<br>
+            Tel. +66 (0) 3825 9050-55</p> 
+            </div></div>
+
+
+            <div style="width: 100%" ><br>
+            <div style="border-bottom: solid 1px #b3b3cc ; width: 60%; padding-bottom:10px;">
+            <p id="show1" style="display: inline;color: black;height: 20px;"> ศูนย์ลำปาง</p>
+            <input onclick="myFunction3()" id="hide3" type="submit"  value ="+"style="font-size:20px;; display: inline; width: 40px;border: none ;background-color: #F1F1F3;outline: none;margin-right: 1%; float: right;height: 20px;color:#b3b3cc">
+            <p style="font-size:14px; display: none;" id="hide33" >248 หมู่ 2 ถ.ลำปาง-เชียงใหม่<br>ต.ปงยางคก อ.ห้างฉัตร จ.ลำปาง <br>52190<br>
+
+            Tel. +66 (0) 5423-7999 โทรสาร +66 (0) 5423-<br>7999 ต่อ 5119</p> 
+            </div></div>
+  
+          </div>
+          </ul>
+
+
+      </div>
+    </div>
+    <div>
+    <div  uk-grid style="background-color:#F1F1F3;color:white;margin-top:20px; height: 600px;">
+        <div style="text-align:left;margin-top:70px; margin-bottom:10px;">
+          <span class=".uk-text-lead" style="color:black ;font-weight: bold">ติดต่อสอบถาม</span>
+          <br> <span style="color:gray;font-size: 14px;">งานบัณฑิตศึกษา ชั้น3 อาหารบรรยายรวม 5 </span>
+          <br > <span style="color:gray;font-size: 14px;">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์</span>
+        
+          <div style="text-align:left;height: 500px ;overflow:hidden;width: 100%">
+          <p style="margin-top:10px;color: black;">
+            <br><i class="fa fa-home"></i><span style="font-weight: bold"> ที่อยู่ </span><br><span style="color:gray; font-size: 14px;">99 ม.18 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 12121</span>
+            <br>
+            <br> <i class="fa fa-phone"></i><span style="font-weight: bold"> โทรศัพท์ </span><br><span style="color:gray;font-size: 14px;"> 02-5644490 ต่อ 2094</span>
+            <br>
+            <br> <i class="fa fa-envelope"></i><span style="font-weight: bold"> อีเมล์ </span><br><span style="color:gray;font-size: 14px;"> grad@sci.tu.ac.th</span>
+          </p>
+          <br>
+          <a href="#" style="color: #c00832 ;text-decoration: underline;font-size: 14px;margin-right: 20px;">Privacy</a>
+            <a href="#" style="color: #c00832 ;text-decoration: underline;font-size: 14px;margin-right: 20px;">Terms & Conditions</a>
+        </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div style="background-color: #F1F1F3 ;text-align: right;color: black;margin-top: 20px;width: 100%;font-size:10px;font-weight: bold; margin-top: 0px;height: 15%"><p>© 2017 Thammasat University</p></div>
+</body>
+</html>
+
+
+
+<script>
+function myFunction0() {
+    var x = document.getElementById("hide00");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById('hide0').value  = "-";
+    } else {
+        x.style.display = "none";
+        document.getElementById('hide0').value  = "+";
+    }
+}
+
+function myFunction1() {
+    var x = document.getElementById("hide11");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById('hide1').value  = "-";
+    } else {
+        x.style.display = "none";
+        document.getElementById('hide1').value  = "+";
+    }
+}
+
+function myFunction2() {
+    var x = document.getElementById("hide22");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById('hide2').value  = "-";
+    } else {
+        x.style.display = "none";
+        document.getElementById('hide2').value  = "+";
+    }
+}
+
+function myFunction3() {
+    var x = document.getElementById("hide33");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById('hide3').value  = "-";
+    } else {
+        x.style.display = "none";
+        document.getElementById('hide3').value  = "+";
+    }
+}
+</script>

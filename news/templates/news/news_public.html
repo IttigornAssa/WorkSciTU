@@ -1,0 +1,34 @@
+{% load staticfiles %}
+{% block header %}
+  {% include 'home/base.html' %}
+{% endblock %}
+
+{% block content  %}
+
+
+    <div style="margin-left:20px; margin-top:20px;">
+        <h2>
+            <span class=".uk-text-lead">ข่าวประชาสัมพันธ์ทั้งหมด
+            </span>
+        </h2>
+        <table class="uk-table uk-table-divider uk-table-hover">
+            <tbody>
+                {% for public in all_public %}
+                  <tr>
+                      <td style="width:20%">{{ public.date }}</td>
+                      <td>
+                          <a class=".uk-text-lead" href="/news/public/{{ public.id }}/">{{ public.title }}</a>
+                      </td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+
+{% block footer %}
+  {% include 'home/base2.html' %}
+{% endblock %}
+
